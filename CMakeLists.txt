@@ -6,23 +6,19 @@ set(SOURCES
   src/rc.c
 )
 
-add_library(G_0_rc_static STATIC ${SOURCES})
-set_target_properties(G_0_rc_static PROPERTIES
+add_library(G_0_rc STATIC ${SOURCES})
+set_target_properties(G_0_rc PROPERTIES
   OUTPUT_NAME "-0_rc"
 )
 
-target_include_directories(G_0_rc_static
+target_include_directories(G_0_rc
   PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/include
   PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/external_include
 )
 
-target_compile_definitions(G_0_rc_static
-  PRIVATE G_SHARED=0
-)
-
-install(TARGETS G_0_rc_static
+install(TARGETS G_0_rc
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
