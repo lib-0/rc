@@ -1,12 +1,6 @@
 #ifndef G_0_RC_FUNCTIONS_H
 #define G_0_RC_FUNCTIONS_H
 
-#ifdef __cplusplus
-#include <cstddef>
-#else
-#include <stddef.h>
-#endif
-
 #include "rc_types.h"
 
 #ifdef __cplusplus
